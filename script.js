@@ -1,3 +1,7 @@
+// =========================
+// PET CLASS (CORE GAME LOGIC)
+// Handles state: hunger, happiness, age, life cycle
+// =========================
 class Pet {
     constructor(name) {
         this.name = name;
@@ -46,8 +50,16 @@ class Pet {
     }
 }
 
+// =========================
+// GAME INITIALISATION
+// Creates the player’s pet instance
+// =========================
 const myPet = new Pet("Pixel");
 
+// =========================
+// UI UPDATE SYSTEM
+// Syncs game state to the DOM (screen)
+// =========================
 function updateUI() {
 
     const img = document.getElementById("petImage");
@@ -99,6 +111,10 @@ function updateUI() {
     }
 }
 
+// =========================
+// USER INTERACTIONS
+// Button controls for feeding and playing
+// =========================
 document.getElementById("feedBtn").addEventListener("click", () => {
     myPet.feed();
     updateUI();
@@ -109,6 +125,10 @@ document.getElementById("playBtn").addEventListener("click", () => {
     updateUI();
 });
 
+// =========================
+// GAME LOOP
+// Runs automatically over time (pet aging + stat decay)
+// =========================
 setInterval(() => {
     myPet.tick();
     updateUI();
