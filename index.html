@@ -3,15 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Digital Pet</title>
-  <!-- Link to separate CSS file -->
-  <link rel="stylesheet" href="style.css">
+<!-- =========================
+        STYLESHEET
+        Controls layout, colours, and UI styling
+    ========================= -->
+  <link rel="stylesheet" href="tamagotchi.css">
 </head>
 <body>
-
+    <!-- =========================
+        HEADER / TITLE
+    ========================= -->
     <h1 id="name"></h1>
 
+    <!-- =========================
+        PET DISPLAY
+    ========================= -->
     <img id="petImage" src="assets/petstages/egg.png" alt="Pet" width="200">
 
+    <!-- =========================
+        STATS (HUNGER / HAPPINESS)
+    ========================= -->
     <p>Hunger: <span id="hungerValue">50</span></p>
     <div class="bar-container">
         <div id="hungerBar" class="bar"></div>
@@ -25,10 +36,16 @@
     <p>Age: <span id="age">0</span></p>
     <p>Status: <span id="status">Alive 😊</span></p>
 
+    <!-- =========================
+        CONTROLS (BUTTONS)
+    ========================= -->
     <button id="feedBtn">Feed</button>
     <button id="playBtn">Play</button>
 
-    <!-- Script for the Tamagotchi logic -->
+    <!-- =========================
+        GAME SCRIPT
+        Handles pet logic, UI updates, and interactions
+    ========================= -->
     <script src="script.js"></script>
 </body>
 </html>
